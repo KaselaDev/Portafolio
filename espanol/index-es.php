@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    Hola mundo
+    <?php require "header-es.php"; ?>
+    <h1>hola mundo?</h1>
 </body>
 </html>
