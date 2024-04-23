@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Esta es la pagina index de kasela 😀</h1>
+    <h1>Esta es la pagina index.php de kasela 😀</h1>
     
     <?php phpinfo() ?>
 </body>
