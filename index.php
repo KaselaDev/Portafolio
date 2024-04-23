@@ -7,5 +7,7 @@
 </head>
 <body>
     <h1>Esta es la pagina index de kasela 😀</h1>
+    
+    <?php phpinfo() ?>
 </body>
 </html>
