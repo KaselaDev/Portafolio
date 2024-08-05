@@ -1,5 +1,5 @@
 function actualizarTiempo() {
-    const fechaPasada = new Date('2024-08-04T21:55:00');
+    const fechaPasada = new Date('2024-08-03T08:00:00');
     const fechaActual = new Date();
 
     const diferencia = fechaActual - fechaPasada;
