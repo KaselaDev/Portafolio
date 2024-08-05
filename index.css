@@ -646,7 +646,7 @@ footer .vida .tiempo p{
 footer:hover{
     box-shadow: 0px 0px 28px 0px #ffdf74;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 8 00px) {
     nav .opciones{
         display: none;
     }
