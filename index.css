@@ -97,6 +97,7 @@ header .kasela img{
     margin: 10px;
     border-radius: 30px;
     box-shadow: 0px 0px 10px 0px #ffdf74;
+    z-index: 1;
 }
 header .titulo{
     border-radius: 16px;
@@ -115,6 +116,12 @@ header .titulo h1{
     margin: 0;
     position: relative;
     top: 2px;
+}
+header .kasela img:hover{
+    box-shadow: 0px 0px 24px 0px #ffdf74;
+}
+header .kasela .titulo:hover{
+    box-shadow: 0px 0px 24px 0px #ffdf74;
 }
 nav{
     display: flex;
@@ -151,6 +158,9 @@ nav a:hover{
     background-color: rgba(255, 255, 255, 0.8);
     color: black;
     transition: 150ms;
+}
+nav:hover{
+    box-shadow: 0px 0px 24px 0px #ffdf74;
 }
 .separadorHeader{
     width: 100%;
@@ -424,6 +434,20 @@ content{
 .contentStats .stat p i{
     font-size: 32px;
 }
+.contentStats .stat p span{
+    position: absolute;
+    left: 46px;
+    top: 5px;
+}.contentStats .front-end p span{
+    position: absolute;
+    left: 34px;
+    top: 5px;
+}
+.contentStats .otros p span{
+    position: absolute;
+    left: 34px;
+    top: 5px;
+}
 .contentStats .stat:hover{
     background-color: #99999960;
     transform: scale(1.075);
@@ -472,7 +496,7 @@ content{
     text-decoration: none;
 }
 .contentContact .contact:hover{
-    box-shadow: 0px 0px 10px 0px #ffdf74;
+    box-shadow: 0px 0px 16px 0px #ffdf74;
     transition: 250ms;
     transform: scale(1.075);
 }
@@ -608,4 +632,7 @@ footer .vida .tiempo p{
     position: relative;
     top: 2px;
     text-align: center;
+}
+footer:hover{
+    box-shadow: 0px 0px 28px 0px #ffdf74;
 }
