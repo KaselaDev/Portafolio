@@ -1,0 +1,36 @@
+/* html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    ;
+  }
+  
+  body {
+    background-color: ghostwhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .app {
+    display: flex;
+    flex-direction: column;
+    background-color: ghostwhite;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .luces {
+    flex-shrink: 0; 
+  }
+  
+  .content {
+    background-color: ghostwhite;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+   */

@@ -1,0 +1,75 @@
+.contentContact{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 16px;
+    justify-items: center;
+    gap: 15px;
+}
+.contentContact .contact{
+    display: block;
+    width: 80%;
+    border-radius: 20px;
+    text-decoration: none;
+}
+.contentContact .contact:hover{
+    box-shadow: 0px 0px 16px 0px #ffdf74;
+    transition: 250ms;
+    transform: scale(1.075);
+}
+.contentContact .contact .enlace{
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 16px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+.contentContact .contact .enlace .icono{
+    background-color: #53535343;
+    border: rgb(83, 83, 83) solid 1px;
+    border-radius: 20px 12px 12px 20px;
+    box-shadow: 5px 0px 10px 0px #424242b3;
+}
+.contentContact .contact .enlace .icono i{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    overflow: hidden;
+}
+.contentContact .contact .enlace p{
+    text-align: center;
+    font-size: 24px;
+    margin: 11px;
+}
+.contentContact .github,
+.contentContact .github:visited{
+    background-color: var(--github);
+    color: var(--githubLetra);
+}
+.contentContact .linkedin,
+.contentContact .linkedin:visited{
+    background-color: var(--linkedin);
+    color: var(--linkedinLetra);
+}
+.contentContact .instagram,
+.contentContact .instagram:visited{
+    background: var(--instagram);
+    color: var(--instagramLetra);
+}
+.contentContact .gmail,
+.contentContact .gmail:visited{
+    background-color: var(--gmail);
+    color: var(--gmailLetra);
+}
+.contentContact .cv,
+.contentContact .cv:visited{
+    background-color: var(--cv);
+    color: var(--cvLetra);
+}
+.contentContact .whatsapp,
+.contentContact .whatsapp:visited{
+    background-color: var(--whatsapp);
+    color: var(--whatsappLetra);
+}

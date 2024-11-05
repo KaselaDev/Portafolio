@@ -1,0 +1,78 @@
+.contentStats{
+    display: flex;
+    justify-content: space-between;
+}
+.contentStats .stat{
+    background-color: #66666650;
+    width: 25%;
+    min-width: 195px;
+    padding: 10px;
+    border-radius: 16px;
+}
+.contentStats .stat .titulo{
+    text-align: center;
+}
+.contentStats .stat .titulo h3{
+    background: linear-gradient(#ffd700 40%,#998200 80%);
+    background-clip: text;
+    color: transparent;
+    font-size: 36px;
+    margin: 0;
+    text-align: center;
+}
+.contentStats .stat p{
+    font-size: 20px;
+    display: block;
+    position: relative;
+    left: 24px;
+}
+.contentStats .stat p i{
+    font-size: 32px;
+}
+.contentStats .stat p span{
+    position: absolute;
+    left: 46px;
+    top: 5px;
+}.contentStats .front-end p span{
+    position: absolute;
+    left: 34px;
+    top: 5px;
+}
+.contentStats .otros p span{
+    position: absolute;
+    left: 34px;
+    top: 5px;
+}
+.contentStats .stat:hover{
+    background-color: #99999960;
+    transform: scale(1.075);
+    transition: 150ms;
+    box-shadow: 0px 0px 20px 0px #ffdf74;
+}
+.contentStats .stat:hover .html{
+    color: #ff7b00;
+}
+.contentStats .stat:hover .css{
+    color: #0099ff;
+}
+.contentStats .stat:hover .js{
+    color: #ffd900;
+}
+.contentStats .stat:hover .php{
+    color: #a94eff;
+}
+.contentStats .stat:hover .sql{
+    color: #0089ac;
+}
+.contentStats .stat:hover .bash{
+    color: #38aa35;
+}
+.contentStats .stat:hover .git{
+    color: rgb(255, 62, 62);
+}
+.contentStats .stat:hover .figma{
+    color: #0fd478;
+}
+.contentStats .stat:hover .trello{
+    color: #0099ff;
+}

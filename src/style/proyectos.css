@@ -1,0 +1,130 @@
+.project{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+    background-color: #0000006a;
+    color: #eee;
+    border-radius: 20px;
+    padding: 16px;
+    margin-top: 16px;
+}
+.project:hover{
+    transition: 300ms;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 24px 0px #ffdf74;
+    background-color: #333333da;
+}
+.project .info h3{
+    background: linear-gradient(#00ccff 40%,#0090b4 80%);
+    background-clip: text;
+    color: transparent;
+    font-size: 36px;
+    margin: 0;
+}
+.project .info h5{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+.project .info .desc{
+    font-weight: 500;
+}
+.lenguajes{
+    display: flex;
+    justify-content: space-around;
+    background-color: #5a5a5a50;
+    border-radius: 20px;
+    padding: 10px 16px;
+}
+.lenguajes p{
+    margin: 0;
+}
+.project .btnEventos{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.project .btnEventos div,
+.project .btnEventos a{
+    padding: 10px;
+}
+.project .btnEventos .visitar,
+.project .btnEventos .visitar:visited{
+    background-color: #111;
+    height: 24px;
+    border-radius: 16px;
+    border: rgb(82, 82, 82) solid 1px;
+    text-decoration: none;
+    color: white;
+}
+.project .btnEventos .visitar p{
+    margin: 0;
+}
+.project .btnEventos .visitar:hover{
+    transform: scale(1.1);
+    transition: 100ms;
+}
+.project .btnEventos .proximamente{
+    background-color: #940000;
+    height: 24px;
+    border-radius: 16px;
+    border: rgb(82, 82, 82) solid 1px;
+}
+.project .btnEventos .proximamente p{
+    margin: 0;
+}
+.project .btnEventos .proximamente:hover{
+    transform: scale(1.1);
+    transition: 100ms;
+}
+.project .btnEventos .beta{
+    background-color: #40af00;
+    height: 24px;
+    border-radius: 16px;
+    border: rgb(82, 82, 82) solid 1px;
+}
+.project .btnEventos .beta p{
+    margin: 0;
+}
+.project .btnEventos .beta:hover{
+    transform: scale(1.1);
+    transition: 100ms;
+}
+.project .btnEventos .github,
+.project .btnEventos .github:visited{
+    background-color: var(--github);
+    height: 24px;
+    border-radius: 16px;
+    border: rgb(82, 82, 82) solid 1px;
+    color: white;
+    text-decoration: none;
+}
+.project .btnEventos .github p{
+    margin: 0;
+}
+.project .btnEventos .github:hover{
+    transform: scale(1.1);
+    transition: 100ms;
+}
+.project .imagen{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #66666646;
+    border-radius: 16px;
+    width: 90%;
+    height: 250px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.project .imagen img{
+    width: 95%;
+    height: 95%;
+    border-radius: 12px;
+    object-fit: cover;
+}

@@ -1,0 +1,53 @@
+.inicio{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+.tituloInicio{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.tituloInicio h2{
+    background: linear-gradient(#fffd00 40%,#998200 80%);
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    font-size: 75px;
+    margin: 0;
+}
+.tituloInicio h3{
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+    color: #fff;
+}
+.foto{
+    width: 90%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.foto img{
+    position: relative;
+    width: 20vw;
+    border-radius: 96px 63px 65px 40px;
+    border: #fffd00 solid 2px;
+}
+.contenTituloMensaje{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.whoMe{
+    margin-top: 50px;
+}
+.whoMe p{
+    font-weight: 600;
+    font-size: 24px;
+    color: #fff;
+}
