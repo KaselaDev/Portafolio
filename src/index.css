@@ -2,17 +2,12 @@
 :root{
     --azulOscuro: #0C0E1B;
     --github: #130b20;
-    --githubLetra: #fff;
     --linkedin: #0e76a8;
-    --linkedinLetra: white;
-    --instagram: linear-gradient(to right,#833ab4,#fd1d1d,#fcb045);
-    --instagramLetra: white;
+    --instagram: linear-gradient(130deg,#833ab4,#fd1d1d,#fcb045);
     --cv: peru;
-    --cvLetra: ;
     --whatsapp: #25d366;
-    --whatsappLetra: white;
     --gmail: #ff4949;
-    --gmailLetra: white;
+    --heightFooter: 50px;
 }
 *::selection{
     background-color: gold;
@@ -23,6 +18,7 @@
 }
 html {
     scroll-behavior: smooth;
+    scrollbar-width: thin;
 }
 body{
     margin: 0;
@@ -30,10 +26,15 @@ body{
     box-sizing: border-box;
     background-color: #010012;
     overflow-x: hidden;
-    max-height: 200px;
     width: 100vw;
     font-family: "K2D";
-    max-height: 1000px;
+    min-height: 100%;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 main{
@@ -45,8 +46,13 @@ main{
     
 }
 
+.Content{
+    position: sticky;
+    height: 100%;
+}
+
 .content{
-    position: absolute;
+    position: relative;
     width: 80vw;
     left: 50%;
     transform: translate(-50%);
@@ -98,19 +104,29 @@ main{
 .sql p::selection{
     background-color: #006983;
 }
-/* fin de lenguajes especiales */
+.react p{
+    text-decoration: none;
+    background-image: linear-gradient(to right, #3ed8ff 55%, #3ed8ff 55%);
+    background-position: 0 100%; 
+    background-size: 56px 2px; 
+    background-repeat: no-repeat;
+}
+.react p::selection{
+    background-color: #29d4ff;
+}
 
-/* fin proyectos */
-
-/* fin de conocimientos */
-
-/* fin contacto */
-
-/* fin del responcing */
-@keyframes abrirNavBar1 {
-    0%{
-        top: 5px;
-    }
+.subTitulo {
+    background: linear-gradient(#fffd00 40%, #998200 80%);
+    background-clip: text;
+    color: transparent;
+    font-size: 48px;
+    margin: 0;
+  }
+  
+  @keyframes abrirNavBar1 {
+      0%{
+          top: 5px;
+        }
     50%{
         top: 13px;
     }

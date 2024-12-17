@@ -1,10 +1,11 @@
 import React from 'react'
 import '../../style/contactame.css'
+import Icon from '../../utils/Icon'
 
 export default function Proyectos() {
   return (
     <>
-      <section className="aboutMe" id="aboutMe">
+      <section className="aboutMe" id="Contactame">
       <br />
       <h2 className="subTitulo">Contactarme</h2>
       <br />
@@ -12,7 +13,7 @@ export default function Proyectos() {
         <a href="https://github.com/KaselaDev" target="_blank" rel="noopener noreferrer" className="contact github">
           <div className="enlace">
             <div className="icono">
-              <i className="fa-brands fa-github"></i>
+              <Icon type="brands" icon="faGithub"/>
             </div>
             <div className="texto">
               <p>Github</p>
@@ -22,47 +23,47 @@ export default function Proyectos() {
         <a href="https://www.linkedin.com/in/santiago-casellas/" target="_blank" rel="noopener noreferrer" className="contact linkedin">
           <div className="enlace">
             <div className="icono">
-              <i className="fa-brands fa-linkedin"></i>
+              <Icon type="brands" icon="faLinkedin"/>
             </div>
             <div className="texto">
               <p>LinkedIn</p>
             </div>
           </div>
         </a>
-        <a href="https://www.instagram.com/kasela_oficial/" target="_blank" rel="noopener noreferrer" className="contact instagram">
+        <a href="https://www.instagram.com/kasela.php/" target="_blank" rel="noopener noreferrer" className="contact instagram">
           <div className="enlace">
             <div className="icono">
-              <i className="fa-brands fa-instagram"></i>
+            <Icon type="brands" icon="faInstagram"/>
             </div>
             <div className="texto">
               <p>Instagram</p>
             </div>
           </div>
         </a>
-        <a href="mailto:b7c4d6d9c3ded6d0d8d4d6c4d2dbdbd6c485878782f7d0dad6dedb99d4d8da" target="_blank" rel="noopener noreferrer" className="contact gmail">
+        <a href="mailto:santiagocasellas2005@gmail.com" target="_blank" rel="noopener noreferrer" className="contact gmail">
           <div className="enlace">
             <div className="icono">
-              <i className="fa-solid fa-envelope"></i>
+              <Icon type="solid" icon="faEnvelope"/>
             </div>
             <div className="texto">
               <p>Gmail</p>
             </div>
           </div>
         </a>
-        <a href="./Santiago_Casellas_CV.pdf" download className="contact cv">
+        <a href="/src/Santiago_Casellas_CV.pdf" download className="contact cv">
           <div className="enlace">
             <div className="icono">
-              <i className="fa-regular fa-file-lines"></i>
+              <Icon type="solid" icon="faFile"/>
             </div>
             <div className="texto">
               <p>Descargar CV</p>
             </div>
           </div>
         </a>
-        <a href="https://wa.me/541163073081" target="_blank" rel="noopener noreferrer" className="contact whatsapp">
+        <a href="https://wa.me/541136013242" target="_blank" rel="noopener noreferrer" className="contact whatsapp">
           <div className="enlace">
             <div className="icono">
-              <i className="fa-brands fa-whatsapp"></i>
+              <Icon type="brands" icon="faWhatsapp"/>
             </div>
             <div className="texto">
               <p>Whatsapp</p>

@@ -1,130 +1,236 @@
-.project{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    justify-items: stretch;
-    align-items: stretch;
-    background-color: #0000006a;
-    color: #eee;
-    border-radius: 20px;
-    padding: 16px;
-    margin-top: 16px;
-}
-.project:hover{
-    transition: 300ms;
-    transform: scale(1.05);
-    box-shadow: 0px 0px 24px 0px #ffdf74;
-    background-color: #333333da;
-}
-.project .info h3{
-    background: linear-gradient(#00ccff 40%,#0090b4 80%);
-    background-clip: text;
-    color: transparent;
-    font-size: 36px;
-    margin: 0;
-}
-.project .info h5{
-    margin: 0;
-    font-size: 16px;
-    font-weight: 400;
-    color: #666;
-}
-.project .info .desc{
-    font-weight: 500;
-}
-.lenguajes{
-    display: flex;
-    justify-content: space-around;
-    background-color: #5a5a5a50;
-    border-radius: 20px;
-    padding: 10px 16px;
-}
-.lenguajes p{
-    margin: 0;
-}
-.project .btnEventos{
-    display: flex;
-    gap: 8px;
-    margin-bottom: 10px;
-}
-.project .btnEventos div,
-.project .btnEventos a{
-    padding: 10px;
-}
-.project .btnEventos .visitar,
-.project .btnEventos .visitar:visited{
-    background-color: #111;
-    height: 24px;
-    border-radius: 16px;
-    border: rgb(82, 82, 82) solid 1px;
-    text-decoration: none;
-    color: white;
-}
-.project .btnEventos .visitar p{
-    margin: 0;
-}
-.project .btnEventos .visitar:hover{
-    transform: scale(1.1);
-    transition: 100ms;
-}
-.project .btnEventos .proximamente{
-    background-color: #940000;
-    height: 24px;
-    border-radius: 16px;
-    border: rgb(82, 82, 82) solid 1px;
-}
-.project .btnEventos .proximamente p{
-    margin: 0;
-}
-.project .btnEventos .proximamente:hover{
-    transform: scale(1.1);
-    transition: 100ms;
-}
-.project .btnEventos .beta{
-    background-color: #40af00;
-    height: 24px;
-    border-radius: 16px;
-    border: rgb(82, 82, 82) solid 1px;
-}
-.project .btnEventos .beta p{
-    margin: 0;
-}
-.project .btnEventos .beta:hover{
-    transform: scale(1.1);
-    transition: 100ms;
-}
-.project .btnEventos .github,
-.project .btnEventos .github:visited{
-    background-color: var(--github);
-    height: 24px;
-    border-radius: 16px;
-    border: rgb(82, 82, 82) solid 1px;
-    color: white;
-    text-decoration: none;
-}
-.project .btnEventos .github p{
-    margin: 0;
-}
-.project .btnEventos .github:hover{
-    transform: scale(1.1);
-    transition: 100ms;
-}
-.project .imagen{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #66666646;
-    border-radius: 16px;
-    width: 90%;
-    height: 250px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.project .imagen img{
-    width: 95%;
-    height: 95%;
-    border-radius: 12px;
-    object-fit: cover;
-}
+.projects {
+    padding: 24px 0;
+  
+    .project {
+      display: grid;
+      grid-template-columns: 1fr 50%;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      grid-template-areas:
+        "info imagen";
+      justify-items: stretch;
+      align-items: stretch;
+      background-color: rgba(0, 0, 0, 0.42);
+      color: #eee;
+      border-radius: 20px;
+      padding: 16px;
+      margin-top: 16px;
+      transition: 300ms;
+  
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 24px 0px #ffdf74;
+        background-color: rgba(51, 51, 51, 0.85);
+      }
+  
+      .info {
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+  
+        .textTop{
+          h3 {
+            background: linear-gradient(#00ccff 40%, #0090b4 80%);
+            background-clip: text;
+            color: transparent;
+            font-size: 36px;
+            margin: 0;
+          }
+    
+          h5 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 400;
+            color: #666;
+          }
+    
+          .desc {
+            font-weight: 500;
+          }
+        }
+
+        .textButton{
+
+          .lenguajes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: space-around;
+            background-color: rgba(90, 90, 90, 0.31);
+            border-radius: 20px;
+            padding: 10px 16px;
+      
+            p {
+              margin: 0;
+            }
+          }
+      
+          .btnEventos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+      
+            a {
+              text-decoration: none;
+            }
+      
+            .btn {
+              padding: 10px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              height: 24px;
+              border-radius: 16px;
+              border: 1px solid #525252;
+              gap: 8px;
+              user-select: none;
+              transition: transform 100ms;
+      
+              .icon {
+                font-size: 26px;
+              }
+      
+              p {
+                margin: 0;
+                font-size: 22px;
+              }
+      
+              &:hover {
+                transform: scale(1.05);
+              }
+            }
+      
+            .visitar,
+            .visitar:visited {
+              background-color: #111;
+              color: white;
+              text-decoration: none;
+            }
+      
+            .proximamente {
+              background-color: #940000;
+            }
+      
+            .beta {
+              background-color: orange;
+              color: #111;
+            }
+      
+            .version {
+              background-color: #40af00;
+            }
+      
+            .github,
+            .github:visited {
+              background-color: var(--github);
+              color: white;
+              text-decoration: none;
+            }
+      
+            .link {
+              background-color: #001322;
+              color: rgb(255, 252, 236);
+            }
+          }
+        }
+
+      }
+  
+  
+      .imagen {
+        grid-area: imagen;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(102, 102, 102, 0.27);
+        border-radius: 16px;
+        width: 100%;
+        height: auto;
+        top: 50%;
+        transform: translateY(-50%);
+  
+        img {
+          width: 95%;
+          height: 95%;
+          border-radius: 12px;
+          object-fit: cover;
+        }
+      }
+  
+      @media (max-width: 1150px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+          "imagen"
+          "info";
+  
+        .imagen {
+          width: auto;
+          height: auto;
+          padding: 4px;
+  
+          img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  
+    .verMas {
+      background-color: gold;
+      width: fit-content;
+      padding: 8px;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+  
+      h4 {
+        margin: 0;
+        color: #000;
+        font-size: 32px;
+      }
+  
+      .arrows {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 30px;
+        transition: height 100ms;
+  
+        .icon {
+          font-size: 28px;
+          position: absolute;
+          left: 50%;
+          top: 0;
+          transform: translate(-50%);
+          transition: top 100ms;
+        }
+      }
+  
+      &:hover {
+        .arrows {
+          height: 40px;
+  
+          .icon:nth-child(2) {
+            top: 8px;
+          }
+  
+          .icon:nth-child(3) {
+            top: 16px;
+          }
+        }
+      }
+    }
+  }
+  

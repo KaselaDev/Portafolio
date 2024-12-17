@@ -12,6 +12,7 @@ export default function Landing() {
       <Proyectos />
       <Conocimientos />
       <Contactarme />
+      <div className="separadorFooter" />
     </div>
   )
 }

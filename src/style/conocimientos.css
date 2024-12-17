@@ -1,78 +1,104 @@
-.contentStats{
+.contentStats {
     display: flex;
-    justify-content: space-between;
-}
-.contentStats .stat{
-    background-color: #66666650;
-    width: 25%;
-    min-width: 195px;
-    padding: 10px;
-    border-radius: 16px;
-}
-.contentStats .stat .titulo{
-    text-align: center;
-}
-.contentStats .stat .titulo h3{
-    background: linear-gradient(#ffd700 40%,#998200 80%);
-    background-clip: text;
-    color: transparent;
-    font-size: 36px;
-    margin: 0;
-    text-align: center;
-}
-.contentStats .stat p{
-    font-size: 20px;
-    display: block;
-    position: relative;
-    left: 24px;
-}
-.contentStats .stat p i{
-    font-size: 32px;
-}
-.contentStats .stat p span{
-    position: absolute;
-    left: 46px;
-    top: 5px;
-}.contentStats .front-end p span{
-    position: absolute;
-    left: 34px;
-    top: 5px;
-}
-.contentStats .otros p span{
-    position: absolute;
-    left: 34px;
-    top: 5px;
-}
-.contentStats .stat:hover{
-    background-color: #99999960;
-    transform: scale(1.075);
-    transition: 150ms;
-    box-shadow: 0px 0px 20px 0px #ffdf74;
-}
-.contentStats .stat:hover .html{
-    color: #ff7b00;
-}
-.contentStats .stat:hover .css{
-    color: #0099ff;
-}
-.contentStats .stat:hover .js{
-    color: #ffd900;
-}
-.contentStats .stat:hover .php{
-    color: #a94eff;
-}
-.contentStats .stat:hover .sql{
-    color: #0089ac;
-}
-.contentStats .stat:hover .bash{
-    color: #38aa35;
-}
-.contentStats .stat:hover .git{
-    color: rgb(255, 62, 62);
-}
-.contentStats .stat:hover .figma{
-    color: #0fd478;
-}
-.contentStats .stat:hover .trello{
-    color: #0099ff;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 48px;
+  
+    .stat {
+      background-color: #6666664f;
+      width: 100%;
+      min-width: 195px;
+      max-width: 400px;
+      padding: 24px;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      box-shadow: none;
+      transition: 150ms;
+  
+      .titulo {
+        text-align: center;
+  
+        h3 {
+          background: linear-gradient(#ffd700 40%, #998200 80%);
+          background-clip: text;
+          color: transparent;
+          font-size: 44px;
+          margin: 0;
+          text-align: center;
+        }
+      }
+  
+      .tag{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        
+        h4{
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .icon{
+            font-size: 42px;
+        }
+
+        .iconEspecial{
+            width: 42px;
+        }
+      }
+
+      &:hover{
+        background-color: #9f9f9f4f;
+        transform: scale(1.05);
+        box-shadow: 0px 0px 20px 3px gold;
+      }
+    }
+
+    .html {
+      color: #ff7b00;
+    }
+
+    .react {
+      color: #3ed8ff;
+    }
+    
+    .css {
+      color: #0099ff;
+    }
+    
+    .js {
+      color: #ffd900;
+    }
+    
+    .php {
+      color: #a94eff;
+    }
+    
+    .sql {
+      color: #0089ac;
+    }
+    
+    .bash {
+      color: #38aa35;
+    }
+    
+    .git {
+      color: #ff3e3e;
+    }
+    
+    .figma {
+      color: #0fd478;
+    }
+    
+    .trello {
+      color: #0099ff;
+    }
+
+    .motorMaster {
+        color:#5a4eff;
+    }
 }

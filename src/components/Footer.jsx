@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../style/footer.css'
+import Icon from '../utils/Icon';
 
 const Footer = () => {
   const [vida, setVida] = useState({ dias: 0, tiempo: '00:00:00' });
@@ -37,19 +38,24 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer>
-      <div className="web">
-        <h4>kasela.com.ar</h4>
-      </div>
+    <>
+      <footer>
+      {
+        (window.innerWidth > 600) && (
+          <div className="web">
+            <h4>kasela.com.ar</h4>
+          </div>
+        )
+      }
       <div className="redes">
         <a href="https://github.com/KaselaDev" target="_blank" rel="noopener noreferrer" className="red1">
-          <i className="fa-brands fa-github"></i>
+          <Icon css="red1" type="brands" icon="faGithub"/>
         </a>
         <a href="https://www.linkedin.com/in/santiago-casellas/" target="_blank" rel="noopener noreferrer" className="red2">
-          <i className="fa-brands fa-linkedin"></i>
+          <Icon css="red2" type="brands" icon="faLinkedin"/>
         </a>
-        <a href="https://www.instagram.com/kasela_oficial/" target="_blank" rel="noopener noreferrer" className="red3">
-          <i className="fa-brands fa-instagram"></i>
+        <a href="https://wa.me/541136013242" target="_blank" rel="noopener noreferrer" className="red3">
+          <Icon css="red3" type="brands" icon="faWhatsapp"/>
         </a>
       </div>
       <div className="vida">
@@ -62,6 +68,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </>
   );
 };
 
