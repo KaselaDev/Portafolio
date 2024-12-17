@@ -1,0 +1,120 @@
+.contentContact {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 16px;
+    justify-items: center;
+    gap: 15px;
+  
+    .contact {
+      display: block;
+      width: 80%;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: 150ms;
+  
+      &:hover {
+        box-shadow: 0px 0px 16px 0px #ffdf74;
+        transition: 250ms;
+        transform: scale(1.075);
+      }
+  
+      .enlace {
+        display: grid;
+        grid-template-columns: 70px auto;
+        grid-column-gap: 0px;
+        grid-row-gap: 16px;
+        justify-items: stretch;
+        align-items: stretch;
+        color: white;
+  
+        .icono {
+          background-color: #53535343;
+          border: 1px solid rgb(83, 83, 83);
+          border-radius: 20px 12px 12px 20px;
+          box-shadow: 5px 0px 10px 0px #424242b3;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+  
+          .icon {
+            position: relative;
+            font-size: 32px;
+            overflow: hidden;
+          }
+        }
+  
+        p {
+          text-align: center;
+          font-size: 24px;
+          margin: 11px;
+        }
+      }
+    }
+
+    @media (max-width: 770px) {
+      .contact{
+        width: auto;
+        height: auto;
+        border-radius: 40px;
+        box-shadow: 0px 0px 8px 0px #ffdf74;
+        
+        .enlace{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 120px;
+          height: 120px;
+          
+          .icono{
+            background-color: #53535300;
+            border-radius: 0;
+            box-shadow: 0px 0px 0px 0px #424242b3;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 40px;
+
+            .icon{
+              font-size: 65px;
+            }
+          }
+        }
+
+        p{
+          display: none;
+        }
+      }
+    }
+  
+    .github,
+    .github:visited {
+      background-color: var(--github);
+    }
+  
+    .linkedin,
+    .linkedin:visited {
+      background-color: var(--linkedin);
+    }
+  
+    .instagram,
+    .instagram:visited {
+      background: var(--instagram);
+    }
+  
+    .gmail,
+    .gmail:visited {
+      background-color: var(--gmail);
+    }
+  
+    .cv,
+    .cv:visited {
+      background-color: var(--cv);
+    }
+  
+    .whatsapp,
+    .whatsapp:visited {
+      background-color: var(--whatsapp);
+    }
+  }
+  

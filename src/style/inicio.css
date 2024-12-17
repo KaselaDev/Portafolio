@@ -1,0 +1,72 @@
+.inicio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+    .tituloInicio {
+  
+      h2 {
+        background: linear-gradient(#fffd00 40%, #998200 80%);
+        background-clip: text;
+        color: transparent;
+        text-align: center;
+        font-size: 75px;
+        margin: 0;
+      }
+  
+      h3 {
+        text-align: center;
+        font-size: 40px;
+        margin: 0;
+        color: #fff;
+      }
+    }
+  
+    .foto {
+      position: relative;
+      display: flex;
+      justify-content: center;
+  
+      img {
+        position: relative;
+        object-fit: cover;
+        border-radius: 96px 63px 65px 40px;
+        border: #fffd00 solid 2px;
+        width: 40vw;
+        height: auto;
+      }
+    }
+  }
+  
+@media (max-width: 600px) {
+    .inicio{
+        flex-direction: column-reverse;
+
+        .foto{
+
+          img{
+            width: 80%;
+          }
+        }
+    }
+}
+
+.whoMe{
+    margin-top: 50px;
+    
+    .subTitulo{
+      margin-bottom: 16px;
+    }
+
+    .text{
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+
+      span{
+        font-weight: 300;
+        font-size: 24px;
+        color: #fff;
+    }
+    }
+}

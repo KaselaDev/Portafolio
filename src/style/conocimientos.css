@@ -1,0 +1,104 @@
+.contentStats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 48px;
+  
+    .stat {
+      background-color: #6666664f;
+      width: 100%;
+      min-width: 195px;
+      max-width: 400px;
+      padding: 24px;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      box-shadow: none;
+      transition: 150ms;
+  
+      .titulo {
+        text-align: center;
+  
+        h3 {
+          background: linear-gradient(#ffd700 40%, #998200 80%);
+          background-clip: text;
+          color: transparent;
+          font-size: 44px;
+          margin: 0;
+          text-align: center;
+        }
+      }
+  
+      .tag{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        
+        h4{
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .icon{
+            font-size: 42px;
+        }
+
+        .iconEspecial{
+            width: 42px;
+        }
+      }
+
+      &:hover{
+        background-color: #9f9f9f4f;
+        transform: scale(1.05);
+        box-shadow: 0px 0px 20px 3px gold;
+      }
+    }
+
+    .html {
+      color: #ff7b00;
+    }
+
+    .react {
+      color: #3ed8ff;
+    }
+    
+    .css {
+      color: #0099ff;
+    }
+    
+    .js {
+      color: #ffd900;
+    }
+    
+    .php {
+      color: #a94eff;
+    }
+    
+    .sql {
+      color: #0089ac;
+    }
+    
+    .bash {
+      color: #38aa35;
+    }
+    
+    .git {
+      color: #ff3e3e;
+    }
+    
+    .figma {
+      color: #0fd478;
+    }
+    
+    .trello {
+      color: #0099ff;
+    }
+
+    .motorMaster {
+        color:#5a4eff;
+    }
+}
