@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import logo from "../img/logoKasela.jpg"
 import "../style/header.css";
 
 export default function Header() {
@@ -85,7 +86,7 @@ export default function Header() {
         <a href="#Inicio">
           <div className="kasela">
             <div className="icon">
-              <img src="/src/img/logoKasela.jpg" alt="Cargando..." />
+              <img src={logo} alt="Cargando..." />
             </div>
             <div className="titulo" ref={tituloRef}>
               <h1>KaselaDev</h1>
