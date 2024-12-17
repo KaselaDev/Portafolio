@@ -109,7 +109,7 @@ export default function ProyectosLanding({ fecha, titulo, desc, button, leng, im
       </div>
       <div className="imagen">
         {img ? (
-          <img src={img} alt="Cargando..." />
+          <img src={img} alt="Error de carga" />
         ) : (
           <img src="" alt="" />
         )}

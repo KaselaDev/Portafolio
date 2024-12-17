@@ -1,6 +1,6 @@
 import ProyectosLanding from '../cards/ProyectosLanding';
+import React from 'react';
 import '../../style/proyectos.css';
-import Icon from '../../utils/Icon';
 
 export default function Proyectos() {
   return (
@@ -11,7 +11,7 @@ export default function Proyectos() {
           fecha="04 ago 2024"
           titulo="Eva DB Hospital Manager"
           desc="Eva DB es una Aplicación web para la zona de terapia intensiva del hospital inter zonal Eva Peron (ex Castex) para ayudar en su eficiencia, accesibilidad y reducción de papeles, es una aplicación cerrada solo para los residentes del hospital"
-          button={[{ name: "version", version: "1.0" }, "dev"]}
+          button={[{ name: "version", version: "1.0" }]}
           leng={["html", "js", "php", "sql"]}
           img="/src/img/EvaDB.png"
         />
@@ -39,7 +39,7 @@ export default function Proyectos() {
             { name: "link", link: "webgestion.kasela.com.ar" },
           ]}
           leng={["react", "php", "sql"]}
-          img="/src/img/project1.webp"
+          img="/src/img/webGestion.png"
         />
         <br />
         <br />
