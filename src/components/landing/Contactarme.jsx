@@ -1,6 +1,7 @@
 import React from 'react'
-import '../../style/contactame.css'
 import Icon from '../../utils/Icon'
+import CVFile from '../../Santiago_Casellas_CV.pdf'
+import '../../style/contactame.css'
 
 export default function Proyectos() {
   return (
@@ -50,7 +51,7 @@ export default function Proyectos() {
             </div>
           </div>
         </a>
-        <a href="/src/Santiago_Casellas_CV.pdf" download className="contact cv">
+        <a href={CVFile} download className="contact cv">
           <div className="enlace">
             <div className="icono">
               <Icon type="solid" icon="faFile"/>
