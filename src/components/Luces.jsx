@@ -1,7 +1,5 @@
 import React, { useRef, useEffect } from 'react'
 import '../style/luces.css'
-import Particles from 'react-particles'
-import particlesConfig from '../utils/particlesjs-config'
 
 const StarryBackground = () => {
   const canvasRef = useRef(null);
