@@ -13,7 +13,7 @@ export default function Proyectos() {
           desc="Eva DB es una Aplicación web para la zona de terapia intensiva del hospital inter zonal Eva Peron (ex Castex) para ayudar en su eficiencia, accesibilidad y reducción de papeles, es una aplicación cerrada solo para los residentes del hospital"
           button={[{ name: "version", version: "1.0" }]}
           leng={["html", "js", "php", "sql"]}
-          img="/src/img/EvaDB.png"
+          img="/img/yo.png" 
         />
         <ProyectosLanding
           fecha="19 Nov 2024"
@@ -26,7 +26,7 @@ export default function Proyectos() {
             { name: "link", link: "huertaenred.com.ar" },
           ]}
           leng={["html", "js", "php", "sql"]}
-          img="/src/img/huertaenred.png"
+          img="/img/huertaenred.png" 
         />
         <ProyectosLanding
           fecha="10 Dic 2024"
@@ -39,7 +39,7 @@ export default function Proyectos() {
             { name: "link", link: "webgestion.kasela.com.ar" },
           ]}
           leng={["react", "php", "sql"]}
-          img="/src/img/webGestion.png"
+          img="/img/webGestion.png"
         />
         <br />
         <br />
