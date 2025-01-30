@@ -104,7 +104,7 @@ export default function Header() {
           <nav>
             <div className="opciones">
               <a href="#Quien-soy">
-                <p>{lenguage === "ES" ? "¿Quién soy?" : "Who am I?"}</p>
+                <p>{lenguage === "ES" ? "¿Quién soy?" : "About me"}</p>
               </a>
               <a href="#Proyectos">
                 <p>{lenguage === "ES" ? "Proyectos" : "Projects"}</p>

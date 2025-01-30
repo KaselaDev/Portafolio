@@ -25,7 +25,7 @@ export default function Inicio() {
             <div className="espaciadorSections" id="Quien-soy"/>
             <div className="separador"></div>
             <h2 className="subTitulo">
-                {lenguage === "ES" ? "¿Quién soy?" : "Who am I?"}
+                {lenguage === "ES" ? "¿Quién soy?" : "About me"}
             </h2>
             <div className="text">
                 {lenguage === "ES" ? (
