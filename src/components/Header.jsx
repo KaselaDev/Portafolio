@@ -95,10 +95,11 @@ export default function Header() {
             <div className="icon">
               <img src={logo} alt={lenguage === "ES" ? "Cargando..." : "Loading..."} />
             </div>
-            {windowWidth >= 470 ? 
+            {windowWidth >= 470 ? (
             <div className="titulo" ref={tituloRef}>
               <h1>{`<KaselaDev/>`}</h1>
-            </div> : ""}
+            </div> 
+            ) : ""}
           </div>
         </a>
         {windowWidth >= 900 ? (
