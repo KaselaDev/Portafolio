@@ -1,6 +1,6 @@
 import React from 'react'
-import personSVG from '../img/personBackground.svg'
-import '../style/person.css'
+import personSVG from '@/img/personBackground.svg'
+import '@/style/person.css'
 
 export default function Person() {
   return (

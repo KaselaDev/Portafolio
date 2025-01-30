@@ -1,8 +1,13 @@
 import React, { useRef, useState, useEffect } from "react";
-import logo from "../img/logoKasela.jpg"
-import "../style/header.css";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleLenguage } from "@/utils/redux/slices/lenguageSlice";
+import logo from "@/img/logoKasela.jpg";
+import "@/style/header.css";
 
 export default function Header() {
+  const dispatch = useDispatch();
+  const lenguage = useSelector((state) => state.lenguage);
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [btnNavegacion, setBtnNavegacion] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -50,7 +55,7 @@ export default function Header() {
       navResponsiveRef.current.style.backgroundColor = "#857100c0";
       navResponsiveOpcionesRef.current.style.display = "flex";
 
-      (windowWidth < 620) && (tituloRef.current.style.display = "none")
+      windowWidth < 620 && (tituloRef.current.style.display = "none");
 
       setTimeout(() => {
         bar1.current.style.transform = "translateY(-50%) rotate(45deg)";
@@ -68,8 +73,8 @@ export default function Header() {
       navResponsiveRef.current.style.width = "104px";
       navResponsiveRef.current.style.backgroundColor = "#85710000";
       navResponsiveOpcionesRef.current.style.display = "none";
-      
-      (windowWidth < 620) && (tituloRef.current.style.display = "flex")
+
+      windowWidth < 620 && (tituloRef.current.style.display = "flex");
 
       setTimeout(() => {
         bar1.current.style.top = "25%";
@@ -80,34 +85,47 @@ export default function Header() {
     }
   };
 
+  const onLenguage = () => dispatch(toggleLenguage());
+
   return (
     <>
       <header>
         <a href="#Inicio">
           <div className="kasela">
             <div className="icon">
-              <img src={logo} alt="Cargando..." />
+              <img src={logo} alt={lenguage === "ES" ? "Cargando..." : "Loading..."} />
             </div>
             <div className="titulo" ref={tituloRef}>
-              <h1>KaselaDev</h1>
+              <h1>{`<KaselaDev/>`}</h1>
             </div>
           </div>
         </a>
-        {windowWidth >= 810 ? (
+        {windowWidth >= 900 ? (
           <nav>
             <div className="opciones">
               <a href="#Quien-soy">
-                <p>¿Quién soy?</p>
+                <p>{lenguage === "ES" ? "¿Quién soy?" : "Who am I?"}</p>
               </a>
               <a href="#Proyectos">
-                <p>Proyectos</p>
+                <p>{lenguage === "ES" ? "Proyectos" : "Projects"}</p>
               </a>
               <a href="#Conocimientos">
-                <p>Conocimientos</p>
+                <p>{lenguage === "ES" ? "Conocimientos" : "Knowledge"}</p>
               </a>
               <a href="#Contactame">
-                <p>Contactame</p>
+                <p>{lenguage === "ES" ? "Contáctame" : "Contact me"}</p>
               </a>
+              <div className="lenguage" onClick={onLenguage}>
+                <div className={lenguage === "ES" ? "active" : ""}>
+                  <span className="spamActive" />
+                  <img src="https://flagsapi.com/ES/shiny/24.png" />
+                </div>
+                <span />
+                <div className={lenguage === "US" ? "active" : ""}>
+                  <span className="spamActive" />
+                  <img src="https://flagsapi.com/US/shiny/24.png" />
+                </div>
+              </div>
             </div>
           </nav>
         ) : (
@@ -119,17 +137,28 @@ export default function Header() {
             </div>
             <div className="opciones" ref={navResponsiveOpcionesRef}>
               <a href="#Quien-soy">
-                <p>¿Quién soy?</p>
+                <p>{lenguage === "ES" ? "¿Quién soy?" : "Who am I?"}</p>
               </a>
               <a href="#Proyectos">
-                <p>Proyectos</p>
+                <p>{lenguage === "ES" ? "Proyectos" : "Projects"}</p>
               </a>
               <a href="#Conocimientos">
-                <p>Conocimientos</p>
+                <p>{lenguage === "ES" ? "Conocimientos" : "Knowledge"}</p>
               </a>
               <a href="#Contactame">
-                <p>Contactame</p>
+                <p>{lenguage === "ES" ? "Contáctame" : "Contact me"}</p>
               </a>
+              <div className="lenguage" onClick={onLenguage}>
+                <div className={lenguage === "ES" ? "active" : ""}>
+                  <button className="spamActive" />
+                  <img src="https://flagsapi.com/ES/shiny/48.png" />
+                </div>
+                <span />
+                <div className={lenguage === "US" ? "active" : ""}>
+                  <button className="spamActive" />
+                  <img src="https://flagsapi.com/US/shiny/48.png" />
+                </div>
+              </div>
             </div>
           </div>
         )}

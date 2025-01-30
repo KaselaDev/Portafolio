@@ -1,61 +1,54 @@
-import ProyectosLanding from '../cards/ProyectosLanding';
+import ProyectosLanding from '@/components/cards/ProyectosLanding';
+import { useSelector } from "react-redux";
 import React from 'react';
+import Icon from '@/utils/Icon';
 
-import EvaDB from '../../img/EvaDB.png'
-import webGestion from '../../img/webGestion.png'
-import huertaEnRed from '../../img/huertaenred.png'
+import { projectsDataUS, proyectosDataES } from '@/data/proyectos';
 
-import '../../style/proyectos.css';
+import '@/style/proyectos.css';
 
 export default function Proyectos() {
+  const lenguage = useSelector((state) => state.lenguage)
+  const proyectosData = lenguage === "ES" ? proyectosDataES : projectsDataUS;
+
+  const selectProyectos = () => {
+    const array = proyectosData
+      .filter((proyecto) => proyecto.top >= 1 && proyecto.top <= 3)
+      .sort((a, b) => a.top - b.top);
+  
+    return array
+  };
+
   return (
     <>
-      <section className="projects" id="Proyectos">
-        <h2 className="subTitulo">Proyectos</h2>
-        <ProyectosLanding
-          fecha="04 ago 2024"
-          titulo="Eva DB Hospital Manager"
-          desc="Eva DB es una Aplicación web para la zona de terapia intensiva del hospital inter zonal Eva Peron (ex Castex) para ayudar en su eficiencia, accesibilidad y reducción de papeles, es una aplicación cerrada solo para los residentes del hospital"
-          button={[{ name: "version", version: "1.0" }]}
-          leng={["html", "js", "php", "sql"]}
-          img={EvaDB} 
-        />
-        <ProyectosLanding
-          fecha="19 Nov 2024"
-          titulo="Huerta en Red"
-          desc="Es un proyecto de 2 semanas de hacer una red social para que los usuarios publiquen el estado de sus plantas, la idea era presentarlo al municipio y que jubilados y personas que estén en casa aburrida puedan algo que hacer y además investigas si cambiando la zona puede cambiar la cosecha"
-          button={[
-            "beta",
-            "dev",
-            { name: "github", link: "github.com/KaselaDev" },
-            { name: "link", link: "huertaenred.com.ar" },
-          ]}
-          leng={["html", "js", "php", "sql"]}
-          img={huertaEnRed}
-        />
-        <ProyectosLanding
-          fecha="10 Dic 2024"
-          titulo="Web Gestion"
-          desc="Web Gestión es un sistema diseñado para facilitar y mejorar el manejo de tu negocio, proporcionando herramientas que simplifican la administración y optimizan tus operaciones diarias."
-          button={[
-            { name: "version", version: "0.6" },
-            "dev",
-            { name: "github", link: "github.com/KaselaDev" },
-            { name: "link", link: "webgestion.kasela.com.ar" },
-          ]}
-          leng={["react", "php", "sql"]}
-          img={webGestion}
-        />
+      <section className="projects">
+        <div className="espaciadorSections" id="Proyectos"/>
+        <h2 className="subTitulo">{lenguage === "ES" ? "Proyectos" : "Projects"}</h2>
+        {
+          selectProyectos().map((proyecto, index) => {
+            return (
+              <ProyectosLanding 
+                key={index}
+                fecha={proyecto.fecha}
+                titulo={proyecto.titulo}
+                desc={proyecto.desc}
+                button={proyecto.button}
+                leng={proyecto.leng}
+                img={proyecto.img}
+              />
+            )
+          })
+        }
         <br />
         <br />
-        {/* <div className="verMas">
+       {/* <div className="verMas">
           <h4>Ver mas proyectos</h4>
           <div className="arrows">
             <Icon icon="faChevronDown" />
             <Icon icon="faChevronDown" />
             <Icon icon="faChevronDown" />
           </div>
-        </div> */}
+        </div>  */}
       </section>
     </>
   );

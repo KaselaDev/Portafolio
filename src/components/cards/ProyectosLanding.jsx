@@ -1,7 +1,10 @@
 import React from 'react';
 import Icon from '../../utils/Icon';
+import { useSelector } from "react-redux";
 
 export default function ProyectosLanding({ fecha, titulo, desc, button, leng, img }) {
+  const lenguage = useSelector((state) => state.lenguage);
+
   const lengCharge = (lenguaje) => {
     switch (lenguaje) {
       case "html":
@@ -35,6 +38,7 @@ export default function ProyectosLanding({ fecha, titulo, desc, button, leng, im
           </div>
         );
       default:
+        console.log("lengProject not found");
         return null;
     }
   };
@@ -53,7 +57,7 @@ export default function ProyectosLanding({ fecha, titulo, desc, button, leng, im
         return (
           <div key={index} className="btn proximamente">
             <Icon icon="faScrewdriverWrench" />
-            <p>En desarrollo</p>
+            <p>{lenguage === "ES" ? "En desarrollo" : "In development"}</p>
           </div>
         );
       case "beta":
@@ -74,7 +78,7 @@ export default function ProyectosLanding({ fecha, titulo, desc, button, leng, im
         return (
           <a key={index} className="btn link" href={`http://${params.link}`}>
             <Icon icon="faArrowUpRightFromSquare" />
-            <p>Ir a la web</p>
+            <p>{lenguage === "ES" ? "Ir a la web" : "Go to the website"}</p>
           </a>
         );
       case "version":
@@ -108,11 +112,7 @@ export default function ProyectosLanding({ fecha, titulo, desc, button, leng, im
         </div>
       </div>
       <div className="imagen">
-        {img ? (
-          <img src={img} alt="Error de carga" />
-        ) : (
-          <img src="" alt="" />
-        )}
+        <img src={img} alt={lenguage === "ES" ? "Error de carga de imagen" : "Image loading error"} />
       </div>
     </div>
   );

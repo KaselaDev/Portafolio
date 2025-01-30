@@ -52,7 +52,7 @@ footer {
           }
   
           &.red3 {
-            color: var(--whatsapp);
+            color: #f66;
             background-clip: text;
             text-shadow: 220px 220px 100px #fd1d8680;
           }
@@ -65,13 +65,13 @@ footer {
       gap: 12px;
   
       .texto {
-        width: 73px;
-        text-align: end;
+        display: flex;
+        align-items: center;
+        justify-content: end;
   
         p {
           margin: 0;
-          position: relative;
-          top: 3px;
+          text-align: end;
         }
       }
   

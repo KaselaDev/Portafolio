@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import '../style/footer.css'
-import Icon from '../utils/Icon';
+import '@/style/footer.css'
+import Icon from '@/utils/Icon';
+import { useSelector } from "react-redux";
 
 const Footer = () => {
   const [vida, setVida] = useState({ dias: 0, tiempo: '00:00:00' });
+  const lenguage = useSelector((state) => state.lenguage);
 
   useEffect(() => {
     function actualizarTiempo() {
@@ -55,12 +57,12 @@ const Footer = () => {
           <Icon css="red2" type="brands" icon="faLinkedin"/>
         </a>
         <a href="https://wa.me/541136013242" target="_blank" rel="noopener noreferrer" className="red3">
-          <Icon css="red3" type="brands" icon="faWhatsapp"/>
+          <Icon css="red3" type="brands" icon="faInstagram"/>
         </a>
       </div>
       <div className="vida">
         <div className="texto">
-          <p>Tiempo de vida</p>
+          <p>{lenguage === "ES" ? <p>Tiempo <br /> de vida</p> : <p>Life <br /> Time</p>}</p>
         </div>
         <div className="tiempo">
           <p className="vidaDias">Día <span>{vida.dias}</span></p>

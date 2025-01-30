@@ -1,9 +1,8 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from 'react'
-import Inicio from './landing/Inicio'
-import Proyectos from './landing/Proyectos'
-import Conocimientos from './landing/Conocimientos'
-import Contactarme from './landing/Contactarme'
+import Inicio from '@/components/landing/Inicio'
+import Proyectos from '@/components/landing/Proyectos'
+import Conocimientos from '@/components/landing/Conocimientos'
+import Contactarme from '@/components/landing/Contactarme'
 
 export default function Landing() {
   return (

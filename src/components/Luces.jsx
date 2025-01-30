@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-import '../style/luces.css'
+import '@/style/luces.css'
 
 const StarryBackground = () => {
   const canvasRef = useRef(null);

@@ -1,14 +1,18 @@
 import React from 'react'
-import Icon from '../../utils/Icon'
-import CVFile from '../../Santiago_Casellas_CV.pdf'
-import '../../style/contactame.css'
+import Icon from '@/utils/Icon'
+import { useSelector } from "react-redux";
+import CVFileES from '@/data/Santiago_Casellas_CV_Español.pdf'
+import CVFileEN from '@/data/Santiago_Casellas_CV_English.pdf'
+import '@/style/contactame.css'
 
 export default function Proyectos() {
+  const lenguage = useSelector((state) => state.lenguage);
+
   return (
     <>
       <section className="aboutMe" id="Contactame">
       <br />
-      <h2 className="subTitulo">Contactarme</h2>
+      <h2 className="subTitulo">{lenguage === "ES" ? "Contactarme" : "Contact me"}</h2>
       <br />
       <div className="contentContact">
         <a href="https://github.com/KaselaDev" target="_blank" rel="noopener noreferrer" className="contact github">
@@ -41,33 +45,13 @@ export default function Proyectos() {
             </div>
           </div>
         </a>
-        <a href="mailto:santiagocasellas2005@gmail.com" target="_blank" rel="noopener noreferrer" className="contact gmail">
-          <div className="enlace">
-            <div className="icono">
-              <Icon type="solid" icon="faEnvelope"/>
-            </div>
-            <div className="texto">
-              <p>Gmail</p>
-            </div>
-          </div>
-        </a>
-        <a href={CVFile} download className="contact cv">
+        <a href={lenguage === "ES" ? CVFileES : CVFileEN} download className="contact cv">
           <div className="enlace">
             <div className="icono">
               <Icon type="solid" icon="faFile"/>
             </div>
             <div className="texto">
-              <p>Descargar CV</p>
-            </div>
-          </div>
-        </a>
-        <a href="https://wa.me/541136013242" target="_blank" rel="noopener noreferrer" className="contact whatsapp">
-          <div className="enlace">
-            <div className="icono">
-              <Icon type="brands" icon="faWhatsapp"/>
-            </div>
-            <div className="texto">
-              <p>Whatsapp</p>
+              <p>{lenguage === "ES" ? "Descargar CV ES" : "Download CV EN"}</p>
             </div>
           </div>
         </a>

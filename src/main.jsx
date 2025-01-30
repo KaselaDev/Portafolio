@@ -5,14 +5,18 @@ import Luces from './components/Luces'
 import Landing from './components/Landing';
 import Person from './components/Person'
 import React from 'react';
+import { Provider } from 'react-redux';
+import store from '@/utils/redux/store';
 import './index.css';
 
 createRoot(document.getElementById('root')).render(
-  <div className='Content'>
-    <Luces />
-    <Header />
-    <Landing />
-    <Footer />
-    <Person />
-  </div>
+  <Provider store={store}>
+    <div className='Content'>
+      <Luces />
+      <Header />
+      <Landing />
+      <Footer />
+      <Person />
+    </div>
+  </Provider>
 )
