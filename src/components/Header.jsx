@@ -92,41 +92,39 @@ export default function Header() {
       <header>
         <a href="#Inicio">
           <div className="kasela">
+            {windowWidth >= 470 ? (
             <div className="icon">
               <img src={logo} alt={lenguage === "ES" ? "Cargando..." : "Loading..."} />
             </div>
-            {windowWidth >= 470 ? (
+            ) : ""}
             <div className="titulo" ref={tituloRef}>
               <h1>{`<KaselaDev/>`}</h1>
             </div> 
-            ) : ""}
           </div>
         </a>
         {windowWidth >= 900 ? (
           <nav>
-            <div className="opciones">
-              <a href="#Quien-soy">
-                <p>{lenguage === "ES" ? "¿Quién soy?" : "About me"}</p>
-              </a>
-              <a href="#Proyectos">
-                <p>{lenguage === "ES" ? "Proyectos" : "Projects"}</p>
-              </a>
-              <a href="#Conocimientos">
-                <p>{lenguage === "ES" ? "Conocimientos" : "Knowledge"}</p>
-              </a>
-              <a href="#Contactame">
-                <p>{lenguage === "ES" ? "Contáctame" : "Contact me"}</p>
-              </a>
-              <div className="lenguage" onClick={onLenguage}>
-                <div className={lenguage === "ES" ? "active" : ""}>
-                  <span className="spamActive" />
-                  <img src="https://flagsapi.com/ES/shiny/24.png" />
-                </div>
-                <span />
-                <div className={lenguage === "US" ? "active" : ""}>
-                  <span className="spamActive" />
-                  <img src="https://flagsapi.com/US/shiny/24.png" />
-                </div>
+            <a href="#Quien-soy">
+              <p>{lenguage === "ES" ? "¿Quién soy?" : "About me"}</p>
+            </a>
+            <a href="#Proyectos">
+              <p>{lenguage === "ES" ? "Proyectos" : "Projects"}</p>
+            </a>
+            <a href="#Conocimientos">
+              <p>{lenguage === "ES" ? "Conocimientos" : "Knowledge"}</p>
+            </a>
+            <a href="#Contactame">
+              <p>{lenguage === "ES" ? "Contáctame" : "Contact me"}</p>
+            </a>
+            <div className="lenguage" onClick={onLenguage}>
+              <div className={lenguage === "ES" ? "active" : ""}>
+                <span className="spamActive" />
+                <img src="https://flagsapi.com/ES/shiny/24.png" />
+              </div>
+              <span />
+              <div className={lenguage === "US" ? "active" : ""}>
+                <span className="spamActive" />
+                <img src="https://flagsapi.com/US/shiny/24.png" />
               </div>
             </div>
           </nav>
