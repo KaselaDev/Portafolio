@@ -1,0 +1,97 @@
+.contentProyectos{
+    margin-bottom: 290px;
+
+    & > .titulo{
+        color: #fff;
+        font-size: 2.5rem;
+        margin-top: 0;
+    }
+
+    .contentProjects{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+
+        .cardProyecto{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            max-width: 45%;
+            padding: 8px;
+            background-color: #00000080;
+            border-radius: 16px;
+            box-shadow: 0 0 12px 0 gold;
+            transition: 100ms;
+
+            &:hover{
+                box-shadow: 0 0 12px 0 #fff;
+                transform: scale(1.03);
+            }
+        
+            .contentImg{
+                width: auto;
+                
+                img{
+                    border-radius: 12px;
+                    width: 100%;
+                }
+            }
+
+            .contentInfo{
+
+                .fecha{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #999;
+                    margin: 0;
+                }
+            
+                .titulo{
+                    font-size: 24px;
+                    font-weight: 700;
+                    color: #fff;
+                    margin: 0;
+                }
+            
+                .lenguajes {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 8px;
+                    justify-content: space-around;
+                    background-color: rgba(199, 199, 199, 0.31);
+                    border-radius: 20px;
+                    padding: 10px 16px;
+                    margin: 8px 0;
+                    color: #eee;
+              
+                    p {
+                      margin: 0;
+                    }
+                }
+    
+                .verMas{
+                    display: block;
+                    text-decoration: none;
+                    color: #000;
+                    background-color: gold;
+                    padding: 12px 24px;
+                    border-radius: 12px;
+                    font-size: 20px;
+                    font-weight: 600;
+                    transition: 100ms;
+                    bottom: 0;
+                    text-align: center;
+
+                    &:hover{
+                        border: solid 1px #444;
+                        background-color: #111;
+                        color: gold;
+                        box-shadow: 3px 3px;
+                    }
+                }
+            }
+        
+        }
+    }
+}

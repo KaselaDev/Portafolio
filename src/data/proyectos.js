@@ -36,7 +36,7 @@ export const proyectosDataES = [
       { name: "version", version: "0.6" },
       "dev",
       { name: "link", link: "webgestion.kasela.com.ar" },
-      { name: "gitb", link: "github.com/KaselaDev/webGestion" },
+      { name: "github", link: "github.com/KaselaDev/webGestion" },
     ],
     leng: ["react", "php", "sql"],
     img: webGestionImg,
@@ -58,7 +58,7 @@ export const projectsDataUS = [
   {
     top: 2,
     fecha: "19 Nov 2024",
-    titulo: "Huerta En Red",
+    titulo: "Huerta en Red",
     desc: "This was a two-week project to create a social network where users can post updates about their plants. The idea was to present it to the municipality, encouraging retirees and individuals looking for hobbies to participate, and exploring how changing locations might impact harvests.",
     button: [
       "beta",
@@ -77,7 +77,7 @@ export const projectsDataUS = [
       { name: "version", version: "0.6" },
       "dev",
       { name: "link", link: "webgestion.kasela.com.ar" },
-      { name: "gitb", link: "github.com/KaselaDev/webGestion" },
+      { name: "github", link: "github.com/KaselaDev/webGestion" },
     ],
     leng: ["react", "php", "sql"],
     img: webGestionImg,

@@ -25,10 +25,10 @@ export default function Inicio() {
             <div className="espaciadorSections" id="Quien-soy"/>
             <div className="separador"></div>
             <h2 className="subTitulo">
-                {lenguage === "ES" ? "¿Quién soy?" : "About me"}
+                {lenguage === "es" ? "¿Quién soy?" : "About me"}
             </h2>
             <div className="text">
-                {lenguage === "ES" ? (
+                {lenguage === "es" ? (
                 <>
                     <span>
                     Desarrollador de Aplicaciones Web con 4 años de experiencia en la construcción de soluciones robustas y escalables. ✨

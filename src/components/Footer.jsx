@@ -62,7 +62,7 @@ const Footer = () => {
       </div>
       <div className="vida">
         <div className="texto">
-          <p>{lenguage === "ES" ? <p>Tiempo <br /> de vida</p> : <p>Life <br /> Time</p>}</p>
+          {lenguage === "es" ? <p>Tiempo <br /> de vida</p> : <p>Life <br /> Time</p>}
         </div>
         <div className="tiempo">
           <p className="vidaDias">Día <span>{vida.dias}</span></p>

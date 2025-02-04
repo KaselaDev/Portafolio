@@ -12,7 +12,7 @@ export default function Proyectos() {
     <>
       <section className="aboutMe" id="Contactame">
       <br />
-      <h2 className="subTitulo">{lenguage === "ES" ? "Contactarme" : "Contact me"}</h2>
+      <h2 className="subTitulo">{lenguage === "es" ? "Contactarme" : "Contact me"}</h2>
       <br />
       <div className="contentContact">
         <a href="https://github.com/KaselaDev" target="_blank" rel="noopener noreferrer" className="contact github">
@@ -45,13 +45,13 @@ export default function Proyectos() {
             </div>
           </div>
         </a>
-        <a href={lenguage === "ES" ? CVFileES : CVFileEN} download className="contact cv">
+        <a href={lenguage === "es" ? CVFileES : CVFileEN} download className="contact cv">
           <div className="enlace">
             <div className="icono">
               <Icon type="solid" icon="faFile"/>
             </div>
             <div className="texto">
-              <p>{lenguage === "ES" ? "Descargar CV ES" : "Download CV EN"}</p>
+              <p>{lenguage === "es" ? "Descargar CV" : "Download CV"}</p>
             </div>
           </div>
         </a>

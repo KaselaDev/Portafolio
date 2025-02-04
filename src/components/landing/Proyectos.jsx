@@ -1,5 +1,6 @@
 import ProyectosLanding from '@/components/cards/ProyectosLanding';
 import { useSelector } from "react-redux";
+import { Link } from 'react-router-dom';
 import React from 'react';
 import Icon from '@/utils/Icon';
 
@@ -9,7 +10,7 @@ import '@/style/proyectos.css';
 
 export default function Proyectos() {
   const lenguage = useSelector((state) => state.lenguage)
-  const proyectosData = lenguage === "ES" ? proyectosDataES : projectsDataUS;
+  const proyectosData = lenguage === "es" ? proyectosDataES : projectsDataUS;
 
   const selectProyectos = () => {
     const array = proyectosData
@@ -23,7 +24,7 @@ export default function Proyectos() {
     <>
       <section className="projects">
         <div className="espaciadorSections" id="Proyectos"/>
-        <h2 className="subTitulo">{lenguage === "ES" ? "Proyectos" : "Projects"}</h2>
+        <h2 className="subTitulo">{lenguage === "es" ? "Proyectos" : "Projects"}</h2>
         {
           selectProyectos().map((proyecto, index) => {
             return (
@@ -41,14 +42,14 @@ export default function Proyectos() {
         }
         <br />
         <br />
-       {/* <div className="verMas">
+        {/* <Link className="verMas" to={lenguage === "es" ? "/es/Proyectos" : "/us/Projects"}>
           <h4>Ver mas proyectos</h4>
           <div className="arrows">
             <Icon icon="faChevronDown" />
             <Icon icon="faChevronDown" />
             <Icon icon="faChevronDown" />
           </div>
-        </div>  */}
+        </Link> */}
       </section>
     </>
   );

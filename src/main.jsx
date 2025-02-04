@@ -1,22 +1,24 @@
 import { createRoot } from 'react-dom/client'
-import Header from './components/Header'
-import Footer from './components/Footer';
-import Luces from './components/Luces'
-import Landing from './components/Landing';
-import Person from './components/Person'
+import Landing from './components/landing/Landing';
+import Proyectos from './components/Proyectos/Proyectos';
+import LanguageWrapper from './utils/LanguageWrapper';
 import React from 'react';
 import { Provider } from 'react-redux';
 import store from '@/utils/redux/store';
+import { BrowserRouter , Route, Routes } from 'react-router-dom';
 import './index.css';
 
 createRoot(document.getElementById('root')).render(
   <Provider store={store}>
-    <div className='Content'>
-      <Luces />
-      <Header />
-      <Landing />
-      <Footer />
-      <Person />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route 
+          path="/" 
+          element={<LanguageWrapper defaultLang="/us/Landing" />} />
+        <Route
+          path="/:lang/:section" 
+          element={<LanguageWrapper defaultLang="/us/Landing" />} />
+      </Routes>
+    </BrowserRouter>
   </Provider>
 )
