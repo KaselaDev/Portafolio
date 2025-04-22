@@ -42,14 +42,14 @@ export default function Proyectos() {
         }
         <br />
         <br />
-        {/* <Link className="verMas" to={lenguage === "es" ? "/es/Proyectos" : "/us/Projects"}>
-          <h4>Ver mas proyectos</h4>
+        <Link className="verMas" to={lenguage === "es" ? "/es/Proyectos" : "/us/Projects"}>
+          <h4>{lenguage === "es" ? "Ver mas proyectos" : "See more"}</h4>
           <div className="arrows">
             <Icon icon="faChevronDown" />
             <Icon icon="faChevronDown" />
             <Icon icon="faChevronDown" />
           </div>
-        </Link> */}
+        </Link>
       </section>
     </>
   );

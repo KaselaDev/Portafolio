@@ -156,7 +156,7 @@ export default function Header() {
               <div className="lenguage" onClick={onLenguage}>
                 <div className={lenguage === "es" ? "active" : ""}>
                   <button className="spamActive" />
-                  <img src="https://flagsapi.com/es/shiny/48.png" />
+                  <img src="https://flagsapi.com/ES/shiny/48.png" />
                 </div>
                 <span />
                 <div className={lenguage === "US" ? "active" : ""}>

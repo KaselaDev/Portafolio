@@ -40,7 +40,7 @@ export const proyectosDataES = [
     ],
     leng: ["react", "php", "sql"],
     img: webGestionImg,
-  }
+  },
 ];
 
 export const projectsDataUS = [
