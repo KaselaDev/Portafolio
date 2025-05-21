@@ -67,7 +67,8 @@ export default function Proyectos() {
         <div className="contentProyectos">
           <h2 className="titulo">
             {lenguage === "es" ? "Proyectos" : "Projects"}
-             - {proyectosFiltrados.length > 0 ? `(${proyectosFiltrados.length})` : "Sin resultados"}
+            {" - "}
+            {proyectosFiltrados.length > 0 ? `(${proyectosFiltrados.length})` : "Sin resultados"}
           </h2>
           <div className="search-bar">
             <Icon icon="faMagnifyingGlass" />
