@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleLenguage } from "@/utils/redux/slices/lenguageSlice";
 import { Link, Navigate } from "react-router-dom";
-import logo from "@/img/logoKasela.webp";
+import logo from "@/img/LogoKasela.webp";
 import "@/style/header.css";
 
 export default function Header() {
