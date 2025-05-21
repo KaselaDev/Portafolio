@@ -12,7 +12,7 @@ export default function Landing() {
   return (
     <>
       <div className="Content">
-        <Luces />
+        <Luces cantLuces={4} luzFinal={false} />
         <Header />
         <div className='content'>
           <Inicio />

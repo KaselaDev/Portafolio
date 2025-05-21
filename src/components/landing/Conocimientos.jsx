@@ -6,6 +6,7 @@ import linux from "@/img/linuxLogo.svg";
 import bashScript from "@/img/bashScriptLogo.svg";
 import mui from "@/img/muiLogo.svg";
 import figma from "@/img/figmaLogo.svg";
+import flutter from "@/img/flutter.svg";
 import { useSelector } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -27,6 +28,7 @@ const slides = [
   { css: "trello", icon: "faTrello", link: "https://trello.com/"},
   { css: "node", icon: "faNode", link: "https://nodejs.org/es"},
   { css: "linux", img: linux, link: "https://www.linux.org/"},
+  { css: "linux", img: flutter, link: "https://www.flutter.dev/"},
   // { css: "motorMaster", img: motorMaster, link: ""},
 ];
 

@@ -1,54 +1,41 @@
-import ProyectosLanding from '@/components/cards/ProyectosLanding';
+import React from "react";
+import ProyectosLanding from "@/components/cards/ProyectosLanding";
 import { useSelector } from "react-redux";
-import { Link } from 'react-router-dom';
-import React from 'react';
-import Icon from '@/utils/Icon';
+import { Link } from "react-router-dom";
+import Icon from "@/utils/Icon";
+import Button from "@mui/material/Button";
 
-import { projectsDataUS, proyectosDataES } from '@/data/proyectos';
+import { proyectosData } from "@/data/proyectos";
 
-import '@/style/proyectos.css';
+import "@/style/proyectos.css";
 
 export default function Proyectos() {
-  const lenguage = useSelector((state) => state.lenguage)
-  const proyectosData = lenguage === "es" ? proyectosDataES : projectsDataUS;
-
-  const selectProyectos = () => {
-    const array = proyectosData
-      .filter((proyecto) => proyecto.top >= 1 && proyecto.top <= 3)
-      .sort((a, b) => a.top - b.top);
-  
-    return array
-  };
+  const lenguage = useSelector((state) => state.lenguage);
+  const proyectoData = lenguage === "es" ? proyectosData.es : proyectosData.us;
 
   return (
     <>
       <section className="projects">
-        <div className="espaciadorSections" id="Proyectos"/>
-        <h2 className="subTitulo">{lenguage === "es" ? "Proyectos" : "Projects"}</h2>
-        {
-          selectProyectos().map((proyecto, index) => {
-            return (
-              <ProyectosLanding 
-                key={index}
-                fecha={proyecto.fecha}
-                titulo={proyecto.titulo}
-                desc={proyecto.desc}
-                button={proyecto.button}
-                leng={proyecto.leng}
-                img={proyecto.img}
-              />
-            )
-          })
-        }
+        <div className="espaciadorSections" id="Proyectos" />
+        <h2 className="subTitulo">
+          {lenguage === "es" ? "Proyectos" : "Projects"}
+        </h2>
+        {proyectoData.slice(0, 3).map((proyecto, index) => {
+          return (
+            <ProyectosLanding
+              key={index}
+              data={proyecto}
+            />
+          );
+        })}
         <br />
         <br />
-        <Link className="verMas" to={lenguage === "es" ? "/es/Proyectos" : "/us/Projects"}>
-          <h4>{lenguage === "es" ? "Ver mas proyectos" : "See more"}</h4>
-          <div className="arrows">
-            <Icon icon="faChevronDown" />
-            <Icon icon="faChevronDown" />
-            <Icon icon="faChevronDown" />
-          </div>
+        <Link
+          className="verMas"
+          to={lenguage === "es" ? "/es/Proyectos" : "/us/Projects"}
+        >
+          <span /><span /><span /><span />
+          {lenguage === "es" ? "Explorar Proyectos" : "View more projects"}
         </Link>
       </section>
     </>

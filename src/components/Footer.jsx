@@ -3,7 +3,7 @@ import '@/style/footer.css'
 import Icon from '@/utils/Icon';
 import { useSelector } from "react-redux";
 
-const Footer = () => {
+const Footer = ({separator=false}) => {
   const [vida, setVida] = useState({ dias: 0, tiempo: '00:00:00' });
   const lenguage = useSelector((state) => state.lenguage);
 
@@ -41,6 +41,7 @@ const Footer = () => {
 
   return (
     <>
+      {separator && <div className="separator"></div>}
       <footer>
       {
         (window.innerWidth > 600) && (

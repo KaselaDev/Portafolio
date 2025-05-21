@@ -31,7 +31,7 @@ export default function Inicio() {
                 {lenguage === "es" ? (
                 <>
                     <span>
-                    Desarrollador de Aplicaciones Web con 4 años de experiencia en la construcción de soluciones robustas y escalables. ✨
+                    Desarrollador de Aplicaciones con 4 años de experiencia en la construcción de soluciones robustas y escalables. ✨
                     </span>
                     <span>
                     Experto en Back-end con tecnologías Express y PHP, un sólido entendimiento de tecnologías de Front-end y gestión de bases de datos. 👨‍💻
@@ -43,7 +43,7 @@ export default function Inicio() {
                 ) : (
                 <>
                     <span>
-                    Web Applications Developer with 4 years of experience building robust and scalable solutions. ✨
+                    Software Developer with 4 years of experience building robust and scalable solutions. ✨
                     </span>
                     <span>
                     Back-end expert with technologies like Express and PHP, a solid understanding of Front-end technologies, and database management. 👨‍💻

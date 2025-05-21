@@ -1,243 +1,287 @@
 .projects {
-    padding: 24px 0;
-  
-    .project {
-      display: grid;
-      grid-template-columns: 1fr 50%;
-      grid-column-gap: 20px;
-      grid-row-gap: 20px;
-      grid-template-areas:
-        "info imagen";
-      justify-items: stretch;
-      align-items: stretch;
-      background-color: rgba(0, 0, 0, 0.42);
-      color: #eee;
-      border-radius: 20px;
-      padding: 16px;
-      margin-top: 16px;
-      transition: 300ms;
-  
-      &:hover {
-        transform: scale(1.025);
-        box-shadow: 0px 0px 24px 0px #ffdf74;
-        background-color: rgba(51, 51, 51, 0.85);
+  padding: 24px 0;
+
+  .project {
+    display: grid;
+    grid-template-columns: 1fr 50%;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-areas: "info imagen";
+    justify-items: stretch;
+    align-items: stretch;
+    background-color: rgba(0, 0, 0, 0.42);
+    color: #eee;
+    border-radius: 20px;
+    padding: 16px;
+    margin-top: 16px;
+    transition: 300ms;
+
+    &:hover {
+      transform: scale(1.025);
+      box-shadow: 0px 0px 24px 0px #ffdf74;
+      background-color: rgba(51, 51, 51, 0.85);
+    }
+
+    .info {
+      grid-area: info;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .textTop {
+        h3 {
+          background: linear-gradient(#00ccff 40%, #0090b4 80%);
+          background-clip: text;
+          color: transparent;
+          font-size: 36px;
+          margin: 0;
+        }
+
+        h5 {
+          margin: 0;
+          font-size: 16px;
+          font-weight: 400;
+          color: #666;
+        }
+
+        .desc {
+          font-weight: 500;
+        }
       }
-  
-      .info {
-        grid-area: info;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-  
-        .textTop{
-          h3 {
-            background: linear-gradient(#00ccff 40%, #0090b4 80%);
-            background-clip: text;
-            color: transparent;
-            font-size: 36px;
+
+      .textButton {
+        .lenguajes {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          justify-content: space-around;
+          background-color: rgba(90, 90, 90, 0.31);
+          border-radius: 20px;
+          padding: 10px 16px;
+
+          p {
             margin: 0;
-          }
-    
-          h5 {
-            margin: 0;
-            font-size: 16px;
-            font-weight: 400;
-            color: #666;
-          }
-    
-          .desc {
-            font-weight: 500;
           }
         }
 
-        .textButton{
+        .btnEventos {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin-bottom: 10px;
 
-          .lenguajes {
+          a {
+            text-decoration: none;
+          }
+
+          .btn {
+            padding: 10px;
             display: flex;
-            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            height: 24px;
+            border-radius: 16px;
+            border: 1px solid #525252;
             gap: 8px;
-            justify-content: space-around;
-            background-color: rgba(90, 90, 90, 0.31);
-            border-radius: 20px;
-            padding: 10px 16px;
-      
+            user-select: none;
+            transition: transform 100ms;
+
+            .icon {
+              font-size: 26px;
+            }
+
             p {
               margin: 0;
+              font-size: 22px;
+            }
+
+            &:hover {
+              transform: scale(1.05);
             }
           }
-      
-          .btnEventos {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 10px;
-      
-            a {
-              text-decoration: none;
-            }
-      
-            .btn {
-              padding: 10px;
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              height: 24px;
-              border-radius: 16px;
-              border: 1px solid #525252;
-              gap: 8px;
-              user-select: none;
-              transition: transform 100ms;
-      
-              .icon {
-                font-size: 26px;
-              }
-      
-              p {
-                margin: 0;
-                font-size: 22px;
-              }
-      
-              &:hover {
-                transform: scale(1.05);
-              }
-            }
-      
-            .visitar,
-            .visitar:visited {
-              background-color: #111;
-              color: white;
-              text-decoration: none;
-            }
-      
-            .proximamente {
-              background-color: #940000;
-            }
-      
-            .beta {
-              background-color: orange;
-              color: #111;
-            }
-      
-            .version {
-              background-color: #40af00;
-            }
-      
-            .github,
-            .github:visited {
-              background-color: var(--github);
-              color: white;
-              text-decoration: none;
-            }
-      
-            .link {
-              background-color: #001322;
-              color: rgb(255, 252, 236);
-            }
+
+          .visitar,
+          .visitar:visited {
+            background-color: #111;
+            color: white;
+            text-decoration: none;
+          }
+
+          .proximamente {
+            background-color: #940000;
+          }
+
+          .beta {
+            background-color: orange;
+            color: #111;
+          }
+
+          .version {
+            background-color: #40af00;
+          }
+
+          .github,
+          .github:visited {
+            background-color: var(--github);
+            color: white;
+            text-decoration: none;
+          }
+
+          .link {
+            background-color: #001322;
+            color: rgb(255, 252, 236);
           }
         }
-
       }
-  
-  
+    }
+
+    .imagen {
+      grid-area: imagen;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(102, 102, 102, 0.27);
+      border-radius: 16px;
+      width: 100%;
+      height: auto;
+      top: 50%;
+      transform: translateY(-50%);
+
+      img {
+        width: 95%;
+        height: 95%;
+        border-radius: 12px;
+        object-fit: cover;
+      }
+    }
+
+    @media (max-width: 1150px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        "imagen"
+        "info";
+
       .imagen {
-        grid-area: imagen;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(102, 102, 102, 0.27);
-        border-radius: 16px;
-        width: 100%;
+        width: auto;
         height: auto;
-        top: 50%;
-        transform: translateY(-50%);
-  
+        padding: 4px;
+
         img {
-          width: 95%;
-          height: 95%;
-          border-radius: 12px;
+          width: 100%;
+          height: auto;
           object-fit: cover;
         }
       }
-  
-      @media (max-width: 1150px) {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr;
-        grid-template-areas:
-          "imagen"
-          "info";
-  
-        .imagen {
-          width: auto;
-          height: auto;
-          padding: 4px;
-  
-          img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-          }
-        }
-      }
-    }
-  
-    .verMas {
-      background-color: gold;
-      width: fit-content;
-      height: fit-content;
-      padding: 8px;
-      position: relative;
-      left: 50%;
-      transform: translate(-50%);
-      border-radius: 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      cursor: pointer;
-      user-select: none;
-      text-decoration: none;
-
-      &:hover {
-        .arrows {
-          height: 40px;
-  
-          .icon:nth-child(2) {
-            top: 8px;
-          }
-  
-          .icon:nth-child(3) {
-            top: 16px;
-          }
-        }
-      }
-      
-      h4 {
-        margin: 0;
-        color: #000;
-        font-size: 32px;
-      }
-  
-      .arrows {
-        color: #000;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        height: 30px;
-        width: 100%;
-        transition: 100ms;
-        bottom: 0;
-  
-        .icon {
-          font-size: 28px;
-          position: absolute;
-          top: 0;
-          transition: top 100ms;
-        }
-      }
-  
-      
     }
   }
-  
+
+  .verMas {
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #ffd900;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .verMas:hover {
+    background: #ffd900;
+    color: #050801;
+    box-shadow: 0 0 5px #ffd900, 0 0 6px #ffd900, 0 0 12px #ffd900,
+      0 0 36px #ffd900;
+  }
+
+  .verMas span {
+    position: absolute;
+    display: block;
+  }
+
+  .verMas span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffd900);
+    animation: animate1 1s linear infinite;
+  }
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.verMas span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #ffd900);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.verMas span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #ffd900);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.verMas span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #ffd900);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}

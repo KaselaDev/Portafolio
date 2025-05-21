@@ -22,6 +22,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          transition: 150ms ease-out;
 
           .icon{
             font-size: 120px;
