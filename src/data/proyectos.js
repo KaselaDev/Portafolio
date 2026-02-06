@@ -2,6 +2,8 @@ import evaDBImg from '@/img/EvaDB.png';
 import huertaEnRedImg from '@/img/huertaenred.png';
 import webGestionImg from '@/img/webGestion.png';
 import fletaloImg from '@/img/fletalo.png';
+import blogFotografoImg from '@/img/blogFotografo.png';
+import tkfelectroImg from '@/img/tkfelectro.png';
 import { version } from 'react';
 
 export const proyectosData = {
@@ -62,6 +64,32 @@ export const proyectosData = {
       tag: ["Node.js", "MySQL", "Flutter", "App Movile"],
       img: fletaloImg,
     },
+    {
+      fecha: "10 Oct 2025",
+      titulo: "Blog Fotografo",
+      desc: "Blog Fotografo es un blog realizado para un fotografo español que queria compartir sus trabajos y experiencias. que trae para administrar sus articulos y ver estadisticas de sus publicaciones",
+      version: "1.0",
+      button: [
+        { name: "version", version: "1.0" },
+        "dev",
+      ],
+      leng: ["react", "node", "sql"],
+      tag: ["Node.js", "MySQL", "React", "Web App"],
+      img: blogFotografoImg,
+    },
+    {
+      fecha: "10 Oct 2025",
+      titulo: "TKF Electro",
+      desc: "TKF Electro es un e-commerce para un emprendimeinto argentino. la aplicaicon cuneta con de venta de productos y pagos por mercado pago, tambien cuenta con gestion de stock y pedidos para el administrador.",
+      version: "1.0",
+      button: [
+        { name: "version", version: "1.0" },
+        "dev",
+      ],
+      leng: ["react", "node", "sql"],
+      tag: ["Node.js", "MySQL", "React", "Web App", "Mercado Pago"],
+      img: tkfelectroImg,
+    },
   ],
   us: [
     {
@@ -119,6 +147,32 @@ export const proyectosData = {
       leng: ["flutter", "php", "sql"],
       tag: ["Node.js", "MySQL", "Flutter", "App Movile"],
       img: fletaloImg,
+    },
+    {
+      fecha: "10 Oct 2025",
+      titulo: "Photographer's Blog",
+      desc: "Photographer's Blog is a blog created for a Spanish photographer who wanted to share his work and experiences. It includes features for managing his articles and viewing statistics about his publications.",
+      version: "1.0",
+      button: [
+        { name: "version", version: "1.0" },
+        "dev",
+      ],
+      leng: ["react", "node", "sql"],
+      tag: ["Node.js", "MySQL", "React", "Web App"],
+      img: blogFotografoImg,
+    },
+    {
+      fecha: "10 Oct 2025",
+      titulo: "TKF Electro",
+      desc: "TKF Electro is an e-commerce platform for an Argentinian business. The application features product sales and payments via Mercado Pago, and also includes stock and order management for the administrator.",
+      version: "1.0",
+      button: [
+        { name: "version", version: "1.0" },
+        "dev",
+      ],
+      leng: ["react", "node", "sql"],
+      tag: ["Node.js", "MySQL", "React", "Web App", "Mercado Pago"],
+      img: tkfelectroImg,
     },
   ]
 };
