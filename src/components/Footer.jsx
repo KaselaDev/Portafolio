@@ -9,7 +9,8 @@ const Footer = ({separator=false}) => {
 
   useEffect(() => {
     function actualizarTiempo() {
-      const fechaPasada = new Date('2024-08-03T08:00:00');
+      // HISTORICO 2024-08-03T08:00:00 horario de la creacion del portfolio
+      const fechaPasada = new Date('2026-02-06T00:00:00');
       const fechaActual = new Date();
 
       const diferencia = fechaActual - fechaPasada;
@@ -63,7 +64,7 @@ const Footer = ({separator=false}) => {
       </div>
       <div className="vida">
         <div className="texto">
-          {lenguage === "es" ? <p>Tiempo <br /> de vida</p> : <p>Life <br /> Time</p>}
+          {lenguage === "es" ? <p>Ultimos <br /> cambios</p> : <p>Recent <br /> changes</p>}
         </div>
         <div className="tiempo">
           <p className="vidaDias">Día <span>{vida.dias}</span></p>
